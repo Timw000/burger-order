@@ -6,7 +6,7 @@
             <ul class="checkout-list">
                 <li v-for="(ingredients, ingredientType) in burgerStore.burgerOrder" :key="'order' + ingredientType"
                     class="order-type">
-                    <span>{{ ingredientType }}</span>
+                    <p>{{ ingredientType }}</p>
                     <ul>
                         <li v-for="ingredient in ingredients" :key="'order' + ingredientType + ingredient"
                             class="order-item">
@@ -27,16 +27,18 @@
                 <h2>
                     {{ order.price }} kr
                 </h2>
-                <span>
+                <p>
                     {{ order.id }}
-                </span>
+                </p>
                 <ul class="order-list">
                     <span>Ingredients</span>
                     <li v-for="(ingredients, ingredientType) in order.burger" :key="order.id + ingredientType">
                         <ul>
                             <li v-for="ingredient in ingredients" :key="order.id + ingredientType + ingredient"
                                 class="order-item">
-                                {{ ingredient }}
+                                <p>
+                                    {{ ingredient }}
+                                </p>
                             </li>
                         </ul>
                     </li>

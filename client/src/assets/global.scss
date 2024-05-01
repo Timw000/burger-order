@@ -15,12 +15,12 @@ html {
   font-family: "Open Sans", sans-serif;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(200deg, #21274e 70%, #183548);
+  background: linear-gradient(200deg, $background-color 70%, darken($background-color, 5%));
   background-repeat: no-repeat;
   background-attachment: fixed;
   word-break: break-word;
   scroll-behavior: smooth;
-  color: white;
+  color: $text-color;
 }
 
 body {
@@ -415,7 +415,7 @@ p {
 
 a {
   text-decoration: none;
-  color: unset;
+  color: $link-color;
 
   &:visited {
     color: unset;

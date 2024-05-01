@@ -6,7 +6,7 @@
         <h2>{{ ingredientType }}</h2>
         <ul>
           <li v-for="ingredient in ingredients" :key="ingredientType + ingredient" class="ingredient-item">
-            <span>{{ ingredient }}</span>
+            <p>{{ ingredient }}</p>
             <div class="buttons">
               <button @click="onAddIngredient(ingredientType.toString(), ingredient)" class="add-btn">Add</button>
               <button @click="onRemoveIngredient(ingredientType.toString(), ingredient)" class="remove-btn">Remove</button>
@@ -20,7 +20,7 @@
     <h2>Your order</h2>
     <ul class="order-list">
       <li v-for="(ingredients, ingredientType) in burgerStore.burgerOrder" :key="'order' + ingredientType" class="order-type">
-        <span>{{ ingredientType }}</span>
+        <p>{{ ingredientType }}</p>
         <ul>
           <li v-for="ingredient in ingredients" :key="'order' + ingredientType + ingredient" class="order-item">
             {{ ingredient }}
@@ -112,7 +112,7 @@ h1, h2 {
   border-radius: 4px;
   cursor: pointer;
   background-color: $secondary-color;
-  color: white;
+  color: $button-text-color;
 }
 
 .place-order-btn {
@@ -121,7 +121,7 @@ h1, h2 {
   text-align: center;
   padding: 1rem;
   background-color: $primary-color;
-  color: white;
+  color: $button-text-color;
   text-decoration: none;
   border-radius: 4px;
 }
