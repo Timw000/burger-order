@@ -1,0 +1,36 @@
+{
+    "Säljare": {
+        "type": "object",
+        "description": "Information om säljaren",
+        "properties": {
+            "Namn": {
+                "type": "string",
+                "description": ""
+            },
+            "Adress": {
+                "type": "object",
+                "description": "",
+                "properties": {
+                    "Adress": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "Postnummer": {
+                        "type": "number",
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "Köpare": {
+        "type": "object",
+        "description": "Information om köparen",
+        "properties": {
+            "Namn": {
+                "type": "",
+                "description": ""
+            }
+        }
+    }
+}
