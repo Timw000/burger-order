@@ -11,8 +11,8 @@ target/
 *.iws
 *.iml
 *.ipr
-node_modules/
-package-lock.json
+client/node_modules/
+client/package-lock.json
 
 
 ### Eclipse ###
